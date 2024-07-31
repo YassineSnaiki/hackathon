@@ -1,0 +1,71 @@
+.stades-image{
+    width: 80%;
+    margin: 0 auto;
+
+   }
+   .stades-image img {
+    width: 100%;
+   }
+   .section-header{
+     font-size: 20px;
+     
+     font-weight:bold ;
+     color: rgb(255, 255, 255);
+     text-align: center;
+     background-color: #83C8AB;
+   
+    }
+     .container1{
+       padding-top: 100px;
+       display: flex;
+       justify-content: space-between;
+       margin: 0 auto;
+       width: 87%;
+       flex-wrap: wrap;
+    }
+    .stade {
+     flex-basis: 45%;
+     margin-bottom: 50px;
+     display: flex;
+     flex-direction: column;
+    }
+    .img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 1px 2px 5px 1px #00000069;
+  }
+   
+     .stade-paragraph{
+       margin-top: 30px; 
+       font-size: 14px;
+       color: black;
+       text-align:justify;
+       margin-left: 2px; 
+   
+     }
+     .stade-paragraph  li {
+      display: block;
+      padding: 5px 20px;
+     }
+     .stade-paragraph  li:nth-child(2n+1) {
+      background-color: rgb(248, 245, 239);
+     }
+       .stade-header{
+         margin-top: 10px;
+         font-size: 14px;
+         color: darkgreen;
+       }
+   @media(max-width : 648px) {
+    .container1 {
+      flex-direction: column;
+      align-items: center;
+    }
+    .stade {
+      align-items: center;
+    }
+    .stade li {
+      text-align: center;
+    }
+   }
