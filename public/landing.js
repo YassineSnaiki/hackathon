@@ -44,3 +44,9 @@ const startSlider = async () => {
 };
 
 document.addEventListener('DOMContentLoaded', startSlider); // Ensure DOM is fully loaded before starting the slider
+
+
+//---------------------------------------------
+
+
+

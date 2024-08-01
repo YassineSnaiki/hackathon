@@ -1,0 +1,11 @@
+
+    <h1>Register for Event <%= eventId %></h1>
+    <form action="/submit-registration" method="post">
+        <!-- Include a hidden field to pass the eventId -->
+        <input type="hidden" name="eventId" value="<%= eventId %>">
+        <!-- Other registration fields -->
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <button type="submit">Register</button>
+    </form>
+

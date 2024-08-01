@@ -16,12 +16,14 @@
 </section>
 <section id="overview">
   <h2 class="section-title">Aperçu</h2>
-  <div class="container">
-    <div class="event-text">
-      
+  <div class="flex-container container">
+    <div class="text-section">
+        <p id="event-text"></p>
+        <button id="participate-button">Participate</button>
+        <button id="details-button">Details</button>
     </div>
-    <div class="pic-ctn">
-
+    <div class="image-section">
+        <img id="event-image" src="" alt="Event Image">
     </div>
   </div>
 </section>
@@ -78,53 +80,6 @@
     
   </div>
 </section>
-<script>
-  
-  let currentIndex = 0;
-let textElement = document.querySelector('.event-text');
-let events = [
-{ image: 'https://picsum.photos/200/300?t=1', text: 'Event 1: Description for the first event...' },
-        { image: 'https://picsum.photos/200/300?t=2', text: 'Event 2: Description for the second event...' },
-        { image: 'https://picsum.photos/200/300?t=3', text: 'Event 3: Description for the third event...' },
-        { image: 'https://picsum.photos/200/300?t=4', text: 'Event 4: Description for the fourth event...' },
-        { image: 'https://picsum.photos/200/300?t=5', text: 'Event 5: Description for the fifth event...' }
-      
-]; // your events array
 
-const picCtn = document.querySelector('.pic-ctn');
 
-events.forEach((event, index) => {
-  const img = document.createElement('img');
-  img.src = event.image;
-  img.alt = `Event ${index + 1}`;
-  img.classList.add('pic');
-  picCtn.appendChild(img);
-});
 
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % events.length;
-  textElement.classList.add('out');
-  setTimeout(() => {
-    textElement.textContent = events[currentIndex].text;
-    textElement.classList.remove('out');
-    textElement.classList.add('in');
-    setTimeout(() => {
-      textElement.classList.remove('in');
-    }, 500);
-  }, 500);
-}, 4000);
-</script>
-
-<style>
-  .event-text {
-  transition: opacity 0.5s;
-}
-
-.event-text.out {
-  opacity: 0;
-}
-
-.event-text.in {
-  opacity: 1;
-}
-</style>
